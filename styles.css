@@ -79,3 +79,86 @@
   	flex-shrink: 0;
 }
 
+
+/*header*/
+.header {
+  	position: absolute;
+  	top: 120px;
+  	left: 0px;
+  	background-color: #f5fcff;
+  	width: 1920px;
+  	display: flex;
+  	align-items: center;
+  	padding: 133.3px 85.3px;
+  	box-sizing: border-box;
+}
+.header-left {
+  	min-height: 526.7px; /* permite crecer si el contenido requiere más espacio */
+  	width: 790.7px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 32px;
+}
+.hey-i-am {
+  	position: relative;
+  	line-height: 150%;
+  	font-weight: 600;
+  	text-align: center;
+}
+.i-create-product-container {
+  	align-self: stretch;
+  	height: auto; /* permitir que el contenedor ajuste su altura */
+  	position: relative;
+  	font-size: 74.67px;
+  	line-height: 1.05; /* mantener el texto grande sin solaparse */
+  	display: block;
+  	flex-shrink: 0;
+}
+.product-design {
+  	color: #5e3bee;
+}
+.lorem-ipsum-dolor13 {
+	width: 100%;
+	max-width: 621.3px;
+	position: relative;
+	font-size: 24px;
+	line-height: 1.6; /* espacio de línea mayor para evitar solapamiento */
+	color: #1c1e53;
+	display: block;
+	margin-top: 8px; /* separación extra respecto al título grande */
+	overflow-wrap: break-word;
+}
+.actions {
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 21.3px 0px 0px;
+  	color: #fff;
+}
+.button2 {
+  	width: 170.7px;
+  	border-radius: 5.33px;
+  	background-color: #5e3bee;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 18.7px 42.7px;
+  	box-sizing: border-box;
+}
+.group-11-1 {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: 480px;
+	height: auto; 
+	object-fit: cover;
+	border-radius: 6px; 
+	transform: translateX(40px); 
+}
+.section-title3 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 21.3px;
+}
