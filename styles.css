@@ -162,3 +162,251 @@
   	align-items: flex-start;
   	gap: 21.3px;
 }
+
+/*mis habilidades*/
+
+/* .my-skill {
+  	position: absolute;
+  	top: 1116px;
+  	left: 0px;
+  	width: 1920px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: center;
+  	padding: 149.3px 85.3px;
+  	box-sizing: border-box;
+  	gap: 106.7px;
+  	text-align: center;
+}
+.section-title4 {
+  	width: 1024px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: center;
+  	gap: 21.3px;
+}
+.content16 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	text-align: left;
+  	font-size: 64px;
+}
+.row3 {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: flex-start;
+  	justify-content: center;
+  	gap: 42.7px;
+  	text-align: left;
+  	font-size: 32px;
+}
+.content17 {
+  	flex: 1;
+  	border-radius: 10.67px;
+  	background-color: #f5fcff;
+  	border-bottom: 4px solid #5e3bee;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 32px;
+}
+.section-title5 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 32px;
+}
+.strategy-direction {
+  	width: 80px;
+  	height: 80px;
+  	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  	border-radius: 10.67px;
+  	object-fit: cover;
+}
+.content19 {
+  	flex: 1;
+  	border-radius: 10.67px;
+  	background-color: #f5fcff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 32px;
+}
+.lorem-ipsum-dolor10 {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 21.33px;
+  	line-height: 150%;
+  	color: #000;
+} */
+
+/*proyectos*/
+
+.content5 {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	max-width: 100%;
+}
+.row2 {
+  	width: 1749.3px;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 42.7px;
+}
+.card {
+  	flex: 1;
+  	box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15);
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.placeholder-image {
+  	align-self: stretch;
+  	height: 400px;
+  	position: relative;
+  	border-radius: 8px;
+  	max-width: 100%;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	object-fit: cover;
+}
+.content6 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 32px;
+  	gap: 32px;
+}
+.content7 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.title {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 10.7px;
+}
+.blog-title-heading {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 140%;
+}
+.lorem-ipsum-dolor2 {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 21.33px;
+  	line-height: 150%;
+  	color: #1c1e53;
+}
+.avatar {
+  	border-bottom: 1.3px solid #5e3bee;
+  	display: flex;
+  	align-items: center;
+  	padding: 0px 0px 10.7px;
+  	font-size: 18.67px;
+  	color: #000;
+}
+.content8 {
+  	display: flex;
+  	align-items: center;
+  	gap: 16px;
+}
+.vector-icon {
+  	height: 16px;
+  	width: 16px;
+  	position: relative;
+}
+.card2 {
+  	flex: 1;
+  	box-shadow: 0px 5.333333492279053px 16px rgba(0, 0, 0, 0.15);
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.card3 {
+  	flex: 1;
+  	box-shadow: 0px 5.333333492279053px 32px rgba(0, 0, 0, 0.15);
+  	border-radius: 8px;
+  	background-color: #fff;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.blog {
+  	position: relative;
+  	top: 0;
+  	left: 0px;
+  	width: 100%;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 149.3px 85.3px;
+  	box-sizing: border-box;
+  	gap: 106.7px;
+  	text-align: center;
+  	margin-top: 1200px;
+}
+.section-header {
+  	align-self: stretch;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+.section-title2 {
+  	width: 1024px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 21.3px;
+}
+
+.contact-us {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 120%;
+}
+.section-title {
+  	width: 1024px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 21.3px;
+}
+.get-in-touch {
+  	position: relative;
+  	line-height: 150%;
+  	font-weight: 600;
+}
+
+.content3 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	text-align: left;
+  	font-size: 64px;
+}
+.content4 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	text-align: left;
+  	font-size: 32px;
+}
