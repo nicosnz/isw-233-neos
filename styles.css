@@ -6,3 +6,6 @@
 @import 'components/hero/hero.css';
 @import 'components/section/section.css';
 @import 'components/blog-card/blog-card.css';
+@import 'components/project-card/project-card.css';
+@import 'components/contact-form/contact-form.css';
+@import 'components/footer/footer.css';

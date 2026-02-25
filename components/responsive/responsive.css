@@ -1,0 +1,80 @@
+
+@media (max-width: 900px) {
+
+  :root {
+    --px: 28px;
+  }
+
+  /* Hero */
+  .hero__inner {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 36px;
+    padding: 52px var(--px) 60px;
+  }
+
+  .hero__photo-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* Project cards */
+  .project-card,
+  .project-card--flipped {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .project-card--flipped .project-card__image {
+    order: 0; /* reset flip en mobile */
+  }
+
+  /* Blog */
+  .blog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer__nav-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Mobile: <= 600px --- */
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar__links {
+    gap: 18px;
+  }
+
+  .navbar__link {
+    font-size: 12px;
+  }
+
+  /* Hero */
+  .hero__name {
+    font-size: 30px;
+  }
+
+  /* Sections */
+  .section-head__title {
+    font-size: 22px;
+  }
+
+  /* Footer */
+  .footer__nav-group {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+}
