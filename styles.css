@@ -3,4 +3,5 @@
 @import 'components/button/button.css';
 @import 'components/tag-technology/tag-technology.css';
 @import 'components/navbar/navbar.css';
-@import 'components/hero/hero.css'
+@import 'components/hero/hero.css';
+@import 'components/section/section.css';

@@ -1,0 +1,33 @@
+
+.section {
+  padding: var(--space-4xl) 0;
+}
+
+.section-head {
+  margin-bottom: 52px;
+}
+
+.section-head--center {
+  text-align: center;
+}
+
+.section-head__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-black);
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+}
+.section-head__title--light {
+  color: var(--color-white);
+}
+
+.section-head__sub {
+  font-size: 14px;
+  color: var(--color-gray-mid);
+  line-height: 1.7;
+}
+
+.section-head__sub--light {
+  color: var(--color-gray-text);
+}
