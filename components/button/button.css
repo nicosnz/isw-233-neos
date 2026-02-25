@@ -14,7 +14,6 @@ btn {
   text-decoration: none;
 }
 
-/* --- Modifiers --- */
 .btn--green {
   background-color: var(--color-green);
   color: var(--color-white);
