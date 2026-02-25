@@ -20,7 +20,8 @@ El portafolio está construido con tecnologías web modernas que incluyen HTML, 
 El portafolio existe para demostrar mis habilidades técnicas y creativas en el desarrollo de proyectos web. Sirve como una herramienta para presentar mi trabajo a posibles empleadores y colaboradores, destacando la calidad y el enfoque de mis trabajos.
 
 ## Enlace a Figma
-[https://www.figma.com/design/2QSIpDwzsF85LkgWBa7wwp/Portfolio-Draft?node-id=0-1&t=wiyAFUFxNIb56IDt-1](#)  
+[Enlace Portfolio Personal](https://www.figma.com/design/2QSIpDwzsF85LkgWBa7wwp/Portfolio-Draft?node-id=0-1&t=wiyAFUFxNIb56IDt-1)  
 
 ---
+
 
