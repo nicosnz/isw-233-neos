@@ -1,0 +1,135 @@
+
+.footer {
+  background-color: var(--dark-footer);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 0 var(--px);
+}
+
+.footer__contenido {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 52px 0 44px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.footer__eslogan{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__frase{
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.footer__descripcion{
+  font-size: 12.5px;
+  color: #777777;
+  line-height: 1.7;
+}
+
+.footer__navegacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.footer__proyectos{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__titulo{
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.footer__lista li a {
+  font-size: 13px;
+  color: #666666;
+  transition: color 0.2s ease;
+  
+}
+
+.footer__lista li a:hover {
+  color: #cccccc;
+}
+
+.footer__pie{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__derechos {
+  font-size: 12.5px;
+  color: #555555;
+}
+
+.footer__social{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__red {
+  font-size: 12.5px;
+  color: #555555;
+  font-weight: 500;
+}
+
+.footer__redes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  transition: color 0.2s ease;
+}
+
+.footer__redes:hover {
+  color: #ffffff;
+}
+@media (max-width: 900px) {
+  .footer__contenido {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer__navegacion{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  
+  
+
+  .footer__navegacion {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__pie {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+}

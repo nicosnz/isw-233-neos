@@ -56,13 +56,8 @@ img {
   height: 100%;
   object-fit: cover;
 }
-.container {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--px);
-}
-
-.accent {
-  color: var(--green);
-  font-weight: 700;
+@media (max-width: 900px) {
+  :root {
+    --px: 28px;
+  }
 }

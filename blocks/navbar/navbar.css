@@ -61,3 +61,13 @@
 .navbar__icono:hover {
   color: #ffffff;
 }
+
+@media (max-width: 600px) {
+  .navbar__links {
+    gap: 18px;
+  }
+
+  .navbar__link {
+    font-size: 12px;
+  }
+}
