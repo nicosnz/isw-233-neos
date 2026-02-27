@@ -1,0 +1,60 @@
+.hero {
+  background-color: var(--dark-hero);
+  min-height: 42rem;
+  display: flex;
+  align-items: center;
+  padding-top: 5.2rem; 
+}
+
+.hero__contenedor {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 6.4rem var(--px) 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+  width: 100%;
+}
+
+.hero__contenido {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero__titulo {
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.hero__objetivo{
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #cccccc;
+  margin-bottom: .8rem;
+  line-height: 1.5;
+}
+
+.hero__descripcion {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #999999;
+  line-height: 1.65;
+  margin-bottom: 2.8rem;
+}
+
+.hero__imagen {
+  flex-shrink: 0;
+}
+
+.hero__recortada {
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: .3rem solid rgba(255,255,255,0.1);
+}

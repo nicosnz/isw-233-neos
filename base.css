@@ -1,0 +1,68 @@
+:root {
+  --green:       #3F8E00;
+  --green-dark:  #3d9140;
+  --green-hover: #43a047;
+  --black:       #080808;
+  --dark:        #080808;
+  --dark-nav:    #080808;
+  --dark-hero:   #080808;
+  --dark-footer: #080808;
+  --dark-contact:#080808;
+  --white:       #ffffff;
+  --gray-text:   #aaaaaa;
+  --gray-mid:    #666666;
+  --gray-light:  #f0f0f0;
+  --border:      rgba(255,255,255,0.08);
+  --radius:      8px;
+  --radius-lg:   12px;
+  --max-w:       1100px;
+  --px:          48px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #ffffff;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--px);
+}
+
+.accent {
+  color: var(--green);
+  font-weight: 700;
+}
