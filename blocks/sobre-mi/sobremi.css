@@ -29,3 +29,17 @@
   overflow: hidden;
   border: .3rem solid rgba(255,255,255,0.1);
 }
+
+@media (max-width: 900px) {
+  .sobremi__contenedor{
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 36px;
+    padding: 52px var(--px) 60px;
+  }
+
+  .sobremi__recortada {
+    width: 160px;
+    height: 160px;
+  }
+}
