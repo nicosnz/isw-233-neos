@@ -13,34 +13,34 @@
   white-space: nowrap;
 }
 
-.btn-green {
+.btn--green {
   background-color: var(--green);
   color: #fff;
   border: 1.5px solid var(--green);
 }
 
-.btn-green:hover {
+.btn--green:hover {
   background-color: var(--green-dark);
   border-color: var(--green-dark);
 }
 
-.btn-outline {
+.btn--outline {
   background-color: transparent;
   color: var(--green);
   border: 1.5px solid var(--green);
 }
 
-.btn-outline:hover {
+.btn--outline:hover {
   background-color: var(--green);
   color: #fff;
 }
 
-.btn-sm {
+.btn--sm {
   padding: 8px 18px;
   font-size: 13px;
 }
 
-.btn-full {
+.btn--full {
   width: 100%;
   justify-content: center;
   padding: 14px;
