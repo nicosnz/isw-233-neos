@@ -4,7 +4,8 @@
 @import 'base.css';
 @import 'blocks/navbar/navbar.css';
 @import 'blocks/hero/hero.css';
-
+@import 'blocks/projects/projects.css';
+@import 'blocks/blog/blog.css';
 
 .btn {
   display: inline-flex;
@@ -94,147 +95,7 @@
   color: #aaaaaa;
 }
 
-/* ==============================
-   PROJECTS
-   ============================== */
-.projects-section {
-  background-color: #ffffff;
-}
 
-.project-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 52px;
-  align-items: center;
-  margin-bottom: 70px;
-}
-
-.project-row:last-child {
-  margin-bottom: 0;
-}
-
-.project-row--flip {
-  direction: ltr; /* keep normal text direction */
-}
-
-/* Swap columns for flip variant */
-.project-row--flip .project-img {
-  order: -1;
-}
-
-.project-content {
-  padding: 8px 0;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 14px;
-}
-
-.tag {
-  display: inline-block;
-  font-size: 11.5px;
-  font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 20px;
-  border: 1px solid transparent;
-}
-
-/* Tag color variants */
-.tag-java   { background: #e8f5e2; color: #3a7d28; border-color: #c8e6bc; }
-.tag-spring { background: #e0f2eb; color: #1a6b45; border-color: #b6dece; }
-.tag-nest   { background: #fce8e8; color: #c0392b; border-color: #f5c6c3; }
-.tag-html   { background: #fde8dc; color: #b94a1a; border-color: #f5c4ac; }
-.tag-css    { background: #dce8f8; color: #1a4fa0; border-color: #b0ccee; }
-.tag-net    { background: #ede0f8; color: #6822a6; border-color: #d4b6f0; }
-.tag-api    { background: #f8ecd8; color: #a0560e; border-color: #f0d0a0; }
-.tag-mongo  { background: #e0f2e5; color: #1e6e35; border-color: #b4dfc0; }
-.tag-sql    { background: #dce8f8; color: #1a4a80; border-color: #b0c8ee; }
-
-.project-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--black);
-  margin-bottom: 12px;
-  letter-spacing: -0.2px;
-}
-
-.project-desc {
-  font-size: 13.5px;
-  color: #555555;
-  line-height: 1.72;
-  margin-bottom: 22px;
-}
-
-.project-img {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  height: 260px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
-
-/* ==============================
-   BLOG
-   ============================== */
-.blog-section {
-  background-color: #fafafa;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-}
-
-.blog-card {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid #e8e8e8;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.blog-card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
-}
-
-.blog-img {
-  height: 200px;
-  overflow: hidden;
-}
-
-.blog-img img {
-  transition: transform 0.4s ease;
-}
-
-.blog-card:hover .blog-img img {
-  transform: scale(1.03);
-}
-
-.blog-body {
-  padding: 22px 24px 26px;
-}
-
-.blog-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--black);
-  line-height: 1.4;
-  margin-bottom: 10px;
-  letter-spacing: -0.1px;
-}
-
-.blog-excerpt {
-  font-size: 13px;
-  color: #666666;
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
 
 /* ==============================
    CONTACT

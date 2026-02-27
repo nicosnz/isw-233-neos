@@ -1,0 +1,99 @@
+.proyectos {
+    background-color: #ffffff;
+    padding: 80px 0;
+
+}
+.proyectos__container{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--px);
+}
+.proyectos__inicio{
+    margin-bottom: 52px;
+    text-align: center;
+}
+.proyectos__titulo{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.3px;
+    margin-bottom: 14px;
+}
+.proyectos__descripcion{
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.7;
+}
+
+
+.proyecto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.proyecto:last-child {
+  margin-bottom: 0;
+}
+
+.project-row--flip {
+  direction: ltr; /* keep normal text direction */
+}
+
+.project-row--flip .proyecto__imagen{
+  order: -1;
+}
+
+.proyecto__contenido {
+  padding: 8px 0;
+}
+
+.proyecto__tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.proyecto__tecnologia {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+.proyecto__tecnologia--java  { background: #e8f5e2; color: #3a7d28; border-color: #c8e6bc; }
+.proyecto__tecnologia--spring { background: #e0f2eb; color: #1a6b45; border-color: #b6dece; }
+.proyecto__tecnologia--nest  { background: #fce8e8; color: #c0392b; border-color: #f5c6c3; }
+.proyecto__tecnologia--html   { background: #fde8dc; color: #b94a1a; border-color: #f5c4ac; }
+.proyecto__tecnologia--css    { background: #dce8f8; color: #1a4fa0; border-color: #b0ccee; }
+.proyecto__tecnologia--net    { background: #ede0f8; color: #6822a6; border-color: #d4b6f0; }
+.proyecto__tecnologia--api    { background: #f8ecd8; color: #a0560e; border-color: #f0d0a0; }
+.proyecto__tecnologia--mongo  { background: #e0f2e5; color: #1e6e35; border-color: #b4dfc0; }
+.proyecto__tecnologia--sql    { background: #dce8f8; color: #1a4a80; border-color: #b0c8ee; }
+
+.proyecto__nombre {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+.proyecto__descripcion {
+  font-size: 13.5px;
+  color: #555555;
+  line-height: 1.72;
+  margin-bottom: 22px;
+}
+
+.proyecto__imagen {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 260px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
