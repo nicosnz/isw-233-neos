@@ -23,7 +23,7 @@ blocks/
 │
 ├── blog/
 ├── boton/
-├── contac/
+├── contact/
 ├── footer/
 ├── hero/
 ├── navbar/
@@ -61,5 +61,6 @@ Para esta refactorización se utilizó como referencia:
 **Emanuel Oly**
 
 Proyecto desarrollado como parte de la evolución estructural de mi portafolio profesional.
+
 
 
