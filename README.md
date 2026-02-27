@@ -21,13 +21,14 @@ Dentro de ella se modularizaron los siguientes componentes:
 
 blocks/
 │
-├── navbar/
-├── hero/
-├── projects/
 ├── blog/
-├── contact/
+├── boton/
+├── contac/
 ├── footer/
-└── boton/
+├── hero/
+├── navbar/
+├── projects/
+└── sobre-mi/
 
 Cada carpeta contiene sus respectivos estilos y/o archivos asociados al componente.
 
@@ -60,4 +61,5 @@ Para esta refactorización se utilizó como referencia:
 **Emanuel Oly**
 
 Proyecto desarrollado como parte de la evolución estructural de mi portafolio profesional.
+
 
