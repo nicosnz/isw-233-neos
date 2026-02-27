@@ -1,0 +1,31 @@
+.sobremi{
+    background-color: var(--dark-hero);
+    min-height: 42rem;
+    
+    padding-top: 5.2rem; 
+}
+.sobremi__titulo{
+    color: white;
+    text-align: center;
+}
+.sobremi__contenedor{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 6.4rem var(--px) 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    width: 100%;
+}
+.sobremi__imagen {
+  flex-shrink: 0;
+}
+
+.sobremi__recortada {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: .3rem solid rgba(255,255,255,0.1);
+}
