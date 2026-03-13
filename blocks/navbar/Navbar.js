@@ -9,10 +9,10 @@ class Navbar extends HTMLElement {
         <nav class="navbar">
             <div class="navbar__contenedor">
             <ul class="navbar__links">
-                <li><a href="#" class="navbar__link navbar__link--active">Home</a></li>
-                <li><a href="#" class="navbar__link">Proyectos Recientes</a></li>
-                <li><a href="#" class="navbar__link">Blog</a></li>
-                <li><a href="#" class="navbar__link">Contacto</a></li>
+                <li><a href="/" class="navbar__link navbar__link--active">Home</a></li>
+                <li><a href="/proyectos" class="navbar__link">Proyectos Recientes</a></li>
+                <li><a href="/blog" class="navbar__link">Blog</a></li>
+                <li><a href="/contacto" class="navbar__link">Contacto</a></li>
             </ul>
             <div class="navbar__sociales">
                 <a href="#" class="navbar__icono" aria-label="Twitter">

@@ -1,0 +1,16 @@
+{
+    "posts":[
+        {
+            "id":1,
+            "titulo":"De idea a MVP: cómo construir sin sobrepensar",
+            "imagen":"https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=580&h=300&fit=crop",
+            "contenido":"La mayoría de proyectos no fracasan por falta de talento, sino por exceso de planificación y poca ejecución. En este artículo comparto cómo pasar de una idea a un MVP funcional, priorizando velocidad, validación y aprendizaje continuo sobre la perfección."
+        },
+        {
+            "id":2,
+            "titulo":"Mentalidad de desarrollador vs mentalidad de constructor",
+            "imagen":"https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=580&h=300&fit=crop",
+            "contenido":"Escribir código no es lo mismo que construir productos. Un desarrollador se enfoca en la implementación; un constructor piensa en impacto, escalabilidad y resultados. En este artículo exploro la diferencia y por qué la mentalidad lo cambia todo."
+        }
+    ]
+}
