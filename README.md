@@ -117,3 +117,6 @@ Ejemplos:
 - `Footer`
 
 - `TarjetaBlog`
+
+### 6. Link Ayuda
+[Visitar](https://www.google.com)
