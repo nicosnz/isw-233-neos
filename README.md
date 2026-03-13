@@ -44,6 +44,8 @@ Este servicio:
 - Simula una pequeña base de datos en frontend
 
 ## 3. Arquitectura de carpetas
+
+```
 ├── base.css
 ├── blocks
 │   ├── blog
@@ -87,6 +89,7 @@ Este servicio:
 ├── styles.css
 └── vendor
     └── normalize.css
+```
 ## 4. 📄 Páginas
 
 Las páginas del sitio se encuentran en:
