@@ -7,5 +7,10 @@ import "./blocks/footer/Footer.js";
 import "./blocks/blog/TarjetaBlog.js";
 
 import "./pages/Home.js";
+import "./pages/Blog.js";
+import "./pages/Proyectos.js";
+import "./pages/Contacto.js";
+
+
 
 Router.init();

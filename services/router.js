@@ -47,7 +47,7 @@ export const Router = {
             break;
 
         case "/proyectos":
-            page = document.createElement("app-blog");
+            page = document.createElement("app-proyectos");
             break;
         
         case "/contacto":
