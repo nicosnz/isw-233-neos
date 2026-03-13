@@ -17,7 +17,7 @@ class TarjetaBlog extends HTMLElement {
                 <div class="blogs__cuerpo">
                     <h3 class="blogs__titulo">${titulo}</h3>
                     <p class="blogs__descripcion">${contenido}</p>
-                    <a href="#" class="btn btn--green btn--sm">Explorar Más &rsaquo;</a>
+                    <a href="/blog" class="btn btn--green btn--sm">Explorar Más &rsaquo;</a>
                 </div>
                 </div>
                 

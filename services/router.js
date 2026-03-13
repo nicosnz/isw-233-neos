@@ -1,9 +1,12 @@
+
+import routes from "./routes.js";
+
 export const Router = {
 
   init(){
     document.addEventListener("click", (e) => {
 
-      const link = e.target.closest("a.navbar__link");
+      const link = e.target.closest("a");
       if(!link) return;
 
       e.preventDefault();
@@ -30,35 +33,17 @@ export const Router = {
 
     app.innerHTML = ""; 
 
+    const component = routes[route];
+
     let page;
 
-    switch(route){
-
-        case "/":
-            page = document.createElement("app-home");
-            break;
-
-        case "/sobre-mi":
-            page = document.createElement("app-sobremi");
-            break;
-
-        case "/blog":
-            page = document.createElement("app-blog");
-            break;
-
-        case "/proyectos":
-            page = document.createElement("app-proyectos");
-            break;
-        
-        case "/contacto":
-            page = document.createElement("app-contacto");
-            break;
-
-        default:
-            page = document.createElement("h1");
-            page.textContent = "404";
+    if(component){
+      page = document.createElement(component);
     }
-
+    else{
+      page = document.createElement("h1");
+      page.textContent = "404";
+    }
     app.appendChild(page);
 
     window.scrollTo(0,0);
