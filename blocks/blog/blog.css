@@ -83,3 +83,19 @@
     grid-template-columns: 1fr;
   }
 }
+.btn-favorito {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.btn-favorito svg, .btn-favorito i {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-favorito:hover svg {
+  transform: scale(1.2);
+  color: darkred;
+}
