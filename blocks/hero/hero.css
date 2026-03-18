@@ -1,4 +1,6 @@
 .hero {
+  opacity: 1;
+  transform: scale(1);
   background-color: var(--dark-hero);
   min-height: 42rem;
   display: flex;

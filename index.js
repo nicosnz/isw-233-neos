@@ -1,5 +1,5 @@
 import { Router } from "./services/router.js";
-
+import "./services/IntersectionObserver.js";
 import "./blocks/navbar/Navbar.js";
 import "./blocks/hero/Hero.js";
 import "./blocks/sobre-mi/SobreMi.js";
