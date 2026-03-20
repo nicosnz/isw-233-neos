@@ -23,7 +23,7 @@ class TarjetaBlog extends HTMLElement {
                     <p class="blogs__descripcion">${contenido}</p>
                     <a href="/blog" class="btn btn--green btn--sm">Explorar Más &rsaquo;</a>
                     <button class="btn-favorito" aria-label="Agregar a favoritos">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" viewBox="0 0 24 24">
+                        <svg id="iconoMeGusta" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" viewBox="0 0 24 24">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                                      2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
                                      C13.09 3.81 14.76 3 16.5 3
@@ -35,12 +35,54 @@ class TarjetaBlog extends HTMLElement {
             </div>
                 
         `
+        const svg = this.querySelector('#iconoMeGusta');
+        this._observerActivo = false; 
+
+        this.svgObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+            if (mutation.type === "attributes" && mutation.attributeName === "fill") {
+                if (!this._observerActivo) {
+                
+                return;
+                }
+                const nuevoValor = svg.getAttribute("fill");
+                if (nuevoValor === "red") {
+                this.mostrarToast("Blog agregado con éxito a favoritos");
+                } else if (nuevoValor === "gray") {
+                this.mostrarToast("Blog removido con éxito de favoritos");
+                }
+            }
+            });
+        });
+        this.svgObserver.observe(svg, { attributes: true});
         this.querySelector(".btn-favorito").addEventListener("click", () => {
+            this._observerActivo = true;
             this.estado.toggle(titulo);
         });
 
         this.inicializarEstado(titulo);
     }
+    disconnectedCallback() {
+        if (this.svgObserver) {
+            this.svgObserver.disconnect();
+            this.svgObserver = null;
+        }
+    }
+    mostrarToast(mensaje) {
+        const toast = document.createElement("div");
+        toast.className = "toast";
+        toast.textContent = mensaje;
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.classList.add("toast--active"), 10);
+
+        setTimeout(() => {
+            toast.classList.remove("toast--active");
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+
     setEstado(nuevoEstado){
         this.estado = nuevoEstado;
     }
@@ -52,7 +94,6 @@ class TarjetaBlog extends HTMLElement {
 
     saveFavorito(titulo){
         let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-        console.log(titulo);
         
         if(!favoritos.includes(titulo)){
             favoritos.push(titulo);
