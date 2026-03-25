@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/nicosnz/isw-233-neos#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss-import": "^16.1.1",
+    "postcss-nested": "^7.0.2",
     "vite": "^8.0.2"
   }
 }
