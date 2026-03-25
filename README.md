@@ -1,122 +1,194 @@
-# Portfolio Web – SPA con Web Components
+# 🚀 Refactorización del Portfolio con Vite + Handlebars + BEM
 
-Este proyecto es un **portfolio personal desarrollado como Single Page Application (SPA)** utilizando **JavaScript Vanilla, Web Components y la History API** para manejar la navegación sin recargar la página.
+## 📌 Descripción
 
-El objetivo del proyecto es construir una arquitectura limpia y modular inspirada en aplicaciones modernas, manteniendo la simplicidad de **JavaScript sin frameworks**.
-
----
-
-# 🚀 Cambios Recientes
-
-Se realizaron mejoras importantes en la arquitectura del proyecto.
-
-## 1. Implementación de un Router SPA
-
-Se implementó un **router personalizado** que utiliza:
-
-- `History API`
-- `pushState`
-- `popstate`
-
-Esto permite navegar entre páginas sin recargar el navegador.
-
-Archivos relacionados:
-
-services/router.js
-services/routes.js
-
-Las rutas ahora están centralizadas en un **mapa de rutas**, lo que facilita agregar nuevas páginas sin modificar la lógica del router.
+Este update del proyecto consiste en la **refactorización del CV/Portfolio personal**, migrando a un entorno moderno basado en **Vite**, incorporando **Handlebars como motor de plantillas**, un **preprocesador CSS con PostCSS**, y reorganizando completamente los estilos bajo la **metodología BEM con estructura nested**.
 
 ---
 
-## 2. Implementación del patrón Singleton
+## ⚙️ Tecnologías utilizadas
 
-Se añadió el **patrón de diseño Singleton** para manejar el acceso a los posts del blog.
+- ⚡ Vite — entorno de desarrollo rápido
+- 🧩 Handlebars — motor de plantillas (partials reutilizables)
+- 🎨 PostCSS — preprocesador CSS
+- 🧹 ESLint — análisis estático de JavaScript
+- 🎯 Stylelint — análisis de CSS con soporte BEM
+- 🧱 Metodología BEM — estructura de estilos
+
+---
+
+## 🔥 Cambios principales
+
+### 1. ⚡ Integración de Vite
+
+Se migró el proyecto a Vite para:
+
+- Mejorar la velocidad de desarrollo
+- Hot reload (recarga instantánea)
+- Build optimizado
+
+Configuración clave en `vite.config.js`:
+
+- Uso de `vite-plugin-handlebars`
+- Definición de `root` en `/src`
+- Carpeta de salida `/dist`
+
+---
+
+### 2. 🧩 Uso de Handlebars (partials)
+
+Se implementaron **partials reutilizables** para evitar duplicación de código:
+
+📁 `src/partials/`
+
+- `navbar.hbs`
+- `footer.hbs`
+
+Ejemplo de uso:
+
+```html
+{{> navbar}} {{> footer}}
+```
+
+✅ Beneficios:
+
+- Reutilización de layout
+- Mantenimiento centralizado
+- Código más limpio
+
+---
+
+### 3. 🎨 PostCSS como preprocesador
+
+Se integró PostCSS para mejorar la gestión de estilos:
+
+- Permite optimización y escalabilidad
+- Preparado para futuras extensiones (autoprefixer, nesting, etc.)
+
+---
+
+### 4. 🧱 Reestructuración con BEM (Nested)
+
+Se reorganizó completamente el CSS usando **BEM estructurado en carpetas (nested)**.
+
+📁 Nueva estructura:
+
+```
+src/
+└── components/
+    ├── navbar/
+    │   ├── __contenedor
+    │   ├── __links
+    │   ├── __link
+    │   ├── __icono
+    │   └── __sociales
+    ├── projects/
+    │   ├── __proyecto
+    │   ├── __proyecto-contenido
+    │   ├── __proyecto-imagen
+    │   ├── __proyecto-nombre
+    │   ├── __proyecto-descripcion
+    │   └── __proyecto-tecnologia--*
+    └── blog/
+        ├── __tarjeta
+        ├── __imagen
+        ├── __cuerpo
+        └── __titulo
+```
+
+---
+
+### 5. 🧹 Linters configurados
+
+#### ✅ ESLint (JavaScript)
 
 Archivo:
-services/DbPosts.js
-
-Este servicio:
-
-- Carga los datos desde `data/posts.json`
-- Garantiza **una única instancia en toda la aplicación**
-- Evita múltiples lecturas del archivo JSON
-- Simula una pequeña base de datos en frontend
-
-## 3. Arquitectura de carpetas
 
 ```
-├── base.css
-├── blocks
-│   ├── blog
-│   │   ├── blog.css
-│   │   └── TarjetaBlog.js
-│   ├── boton
-│   │   └── boton.css
-│   ├── contact
-│   │   └── contact.css
-│   ├── footer
-│   │   ├── footer.css
-│   │   └── Footer.js
-│   ├── hero
-│   │   ├── hero.css
-│   │   └── Hero.js
-│   ├── navbar
-│   │   ├── navbar.css
-│   │   └── Navbar.js
-│   ├── projects
-│   │   └── projects.css
-│   └── sobre-mi
-│       ├── sobremi.css
-│       └── SobreMi.js
-├── data
-│   └── posts.json
-├── img
-│   ├── perfil2.jpeg
-│   └── perfil.jpeg
-├── index.html
-├── index.js
-├── pages
-│   ├── Blog.js
-│   ├── Contacto.js
-│   ├── Home.js
-│   └── Proyectos.js
-├── README.md
-├── services
-│   ├── DbPosts.js
-│   ├── router.js
-│   └── routes.js
-├── styles.css
-└── vendor
-    └── normalize.css
+.eslintrc.json
 ```
-## 4. 📄 Páginas
 
-Las páginas del sitio se encuentran en:
-pages/
+Script:
 
-Cada página es un Web Component independiente:
+```bash
+npm run lint:js
+```
 
-- `Home.js`
+---
 
-- `Blog.js`
+#### ✅ Stylelint (CSS + BEM)
 
-- `Proyectos.js`
+Archivo:
 
-- `Contacto.js`
+```
+.stylelintrc.json
+```
 
-## 5. Componentes reutilizables
-Los componentes reutilizables están en:
-blocks/
-Ejemplos:
+Incluye:
 
-- `Navbar`
+- `stylelint-config-standard`
+- `stylelint-selector-bem-pattern`
 
-- `Hero`
+Script:
 
-- `Footer`
+```bash
+npm run lint:css
+```
 
-- `TarjetaBlog`
+---
 
-### 6. Link Ayuda
-[Visitar](https://www.google.com)
+#### 🔥 Script combinado
+
+```bash
+npm run lint
+```
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+public/
+src/
+├── components/
+├── data/
+├── pages/
+├── partials/
+├── services/
+└── vendor/
+```
+
+---
+
+#
+
+## 🚀 Cómo ejecutar el proyecto
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🧪 Ejecutar linters
+
+```bash
+npm run lint
+```
+
+---
+
+## 📌 Conclusión
+
+Esta refactorización transforma el proyecto en una arquitectura más profesional, modular y escalable, alineada con estándares actuales de desarrollo frontend.
+
+---
+
+## 👨‍💻 Autor
+
+Emanuel Oly
+
+```
+
+```
