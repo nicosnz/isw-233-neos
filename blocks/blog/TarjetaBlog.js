@@ -47,9 +47,9 @@ class TarjetaBlog extends HTMLElement {
                 }
                 const nuevoValor = svg.getAttribute("fill");
                 if (nuevoValor === "red") {
-                this.mostrarToast("Blog agregado con éxito a favoritos");
+                    this.mostrarToast("Blog agregado con éxito a favoritos");
                 } else if (nuevoValor === "gray") {
-                this.mostrarToast("Blog removido con éxito de favoritos");
+                    this.mostrarToast("Blog removido con éxito de favoritos");
                 }
             }
             });
