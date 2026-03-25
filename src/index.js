@@ -16,5 +16,4 @@ import "./pages/Proyectos.js";
 import "./pages/Contacto.js";
 
 
-
-Router.init();
+window.addEventListener("DOMContentLoaded",Router.init)
