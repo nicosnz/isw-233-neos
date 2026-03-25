@@ -1,0 +1,12 @@
+.proyectos__proyecto-imagen {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 260px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 900px) {
+  .proyectos__proyecto-imagen {
+    order: -1;
+  }
+}

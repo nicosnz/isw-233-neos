@@ -1,0 +1,7 @@
+.sobremi__recortada {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: .3rem solid rgba(255,255,255,0.1);
+}

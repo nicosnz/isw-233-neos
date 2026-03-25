@@ -1,0 +1,10 @@
+.sobremi__contenedor{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 6.4rem var(--px) 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    width: 100%;
+}

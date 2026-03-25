@@ -1,0 +1,7 @@
+.proyectos__proyecto-nombre {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}

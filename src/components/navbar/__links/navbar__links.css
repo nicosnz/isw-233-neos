@@ -1,0 +1,12 @@
+.navbar__links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .navbar__links {
+    gap: 18px;
+  }
+
+ 
+}

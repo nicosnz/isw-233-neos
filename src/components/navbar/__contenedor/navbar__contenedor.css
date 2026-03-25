@@ -1,0 +1,9 @@
+.navbar__contenedor {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--px);
+  height: 5.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+.proyectos__proyecto-tecnologia {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}

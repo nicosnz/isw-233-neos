@@ -1,3 +1,5 @@
+@import "./_active/toast--active.css";
+
 .toast {
   position: fixed;
   top: 20px;
@@ -11,9 +13,4 @@
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 9999;
-}
-
-.toast--active {
-  opacity: 1;
-  transform: translateY(0);
 }

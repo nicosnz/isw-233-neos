@@ -1,0 +1,11 @@
+.navbar__icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaaaaa;
+  transition: color 0.2s ease;
+}
+
+.navbar__icono:hover {
+  color: #ffffff;
+}

@@ -1,0 +1,12 @@
+.blogs__tarjeta {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.blogs__tarjeta:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}

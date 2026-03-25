@@ -1,0 +1,14 @@
+.navbar__link {
+  font-size: 13px;
+  font-weight: 400;
+  color: #cccccc;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+@media (max-width: 600px) {
+  
+  .navbar__link {
+    font-size: 12px;
+  }
+}

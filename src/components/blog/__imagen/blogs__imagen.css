@@ -1,0 +1,12 @@
+.blogs__imagen {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blogs__imagen img {
+  transition: transform 0.4s ease;
+}
+
+.blogs__tarjeta:hover .blogs__imagen img {
+  transform: scale(1.03);
+}
