@@ -17,7 +17,7 @@ class Hero extends HTMLElement {
             <div class="hero__imagen">
                 <div class="hero__recortada">
                 <img
-                    src="img/perfil.jpeg"
+                    src="/perfil.jpeg"
                     alt="Emanuel Oly"
                 />
                 </div>

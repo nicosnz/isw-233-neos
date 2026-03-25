@@ -20,7 +20,7 @@ class SobreMi extends HTMLElement {
                 <div class="sobremi__imagen">
                     <div class="sobremi__recortada">
                     <img
-                        src="img/perfil2.jpeg"
+                        src="/perfil2.jpeg"
                         alt="Emanuel Oly"
                     />
                     </div>
