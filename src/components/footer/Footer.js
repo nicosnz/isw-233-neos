@@ -33,7 +33,7 @@ class Footer extends HTMLElement {
                 </div>
 
                 <div class="footer__pie">
-                <span class="footer__derechos">© 2026 Emanuel Oly</span>
+                <span class="footer__derechos">© {{year}} {{sitename}}</span>
                 <div class="footer__social">
                     <span class="footer__red">Social</span>
                     <a href="#" class="footer__redes" aria-label="Twitter">
