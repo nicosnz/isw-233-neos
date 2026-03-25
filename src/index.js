@@ -3,7 +3,6 @@ import "./index.css";
 
 
 import { Router } from "./services/router.js";
-import "./services/IntersectionObserver.js";
 import "./components/navbar/Navbar.js";
 import "./components/hero/Hero.js";
 import "./components/sobre-mi/SobreMi.js";
@@ -14,6 +13,6 @@ import "./pages/Home.js";
 import "./pages/Blog.js";
 import "./pages/Proyectos.js";
 import "./pages/Contacto.js";
+import "./services/IntersectionObserver.js";
 
-
-window.addEventListener("DOMContentLoaded",Router.init)
+Router.init()
