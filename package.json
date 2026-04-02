@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "webpack serve --mode=development",
+    "build": "webpack",
     "preview": "vite preview",
     "lint:js": "eslint src/**/*.js",
     "lint:css": "stylelint src/**/*.css",
@@ -34,7 +34,9 @@
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-selector-bem-pattern": "^4.0.1",
-    "vite": "^8.0.2",
-    "vite-plugin-handlebars": "^2.0.0"
+    "vite-plugin-handlebars": "^2.0.0",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
   }
 }
