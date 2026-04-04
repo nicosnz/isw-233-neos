@@ -56,3 +56,4 @@ class Footer extends HTMLElement {
 }
 
 customElements.define("app-footer", Footer);
+export default Footer;

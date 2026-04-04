@@ -1,6 +1,6 @@
 import DbPosts from "../services/DbPosts.js";
 
-class Home extends HTMLElement {
+export class Home extends HTMLElement {
 
     constructor(){
         super();
@@ -115,7 +115,7 @@ class Home extends HTMLElement {
                 .then(db => db.getPosts())
                 .then(posts => {
 
-                const container = document.querySelector(".blogs");
+                const container = this.querySelector(".blogs");
 
                 posts.forEach(post => {
 
@@ -137,3 +137,4 @@ class Home extends HTMLElement {
 }
 
 customElements.define("app-home", Home);
+export default Home;

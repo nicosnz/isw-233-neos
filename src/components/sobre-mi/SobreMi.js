@@ -34,3 +34,4 @@ class SobreMi extends HTMLElement {
 }
 
 customElements.define("app-sobremi", SobreMi);
+export default SobreMi;

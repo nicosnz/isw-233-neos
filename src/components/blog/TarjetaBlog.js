@@ -123,3 +123,4 @@ class TarjetaBlog extends HTMLElement {
 
 
 customElements.define("app-tarjeta-blog", TarjetaBlog);
+export default TarjetaBlog;

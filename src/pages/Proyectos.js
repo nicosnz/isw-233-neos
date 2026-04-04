@@ -75,3 +75,4 @@ class Proyectos extends HTMLElement {
 }
 
 customElements.define("app-proyectos", Proyectos);
+export default Proyectos;

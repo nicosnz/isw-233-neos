@@ -38,3 +38,4 @@ class Contacto extends HTMLElement {
 }
 
 customElements.define("app-contacto", Contacto);
+export default Contacto;

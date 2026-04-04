@@ -121,3 +121,4 @@ class Blog extends HTMLElement {
 }
 
 customElements.define("app-blog", Blog);
+export default Blog;
