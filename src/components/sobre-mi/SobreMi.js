@@ -1,3 +1,5 @@
+import perfil2 from '../../images/perfil2.jpeg'
+
 class SobreMi extends HTMLElement {
 
     constructor(){
@@ -20,7 +22,7 @@ class SobreMi extends HTMLElement {
                 <div class="sobremi__imagen">
                     <div class="sobremi__recortada">
                     <img
-                        src="/perfil2.jpeg"
+                        src="${perfil2}"
                         alt="Emanuel Oly"
                     />
                     </div>

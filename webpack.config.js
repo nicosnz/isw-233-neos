@@ -1,4 +1,4 @@
-import path from 'path';
+import path, { parse } from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -30,6 +30,18 @@ export default (env, args) => {
                         'css-loader',
                         'postcss-loader'
                     ]
+                },
+                {
+                    test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                    type: 'asset',
+                    parser:{
+                        dataUrlCondition:{
+                            maxSize: 8 * 1024
+                        }
+                    },
+                    generator: {
+                        filename: 'images/[name].[contenthash][ext]'
+                    }
                 }
             ]
         },
