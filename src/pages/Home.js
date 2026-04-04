@@ -7,27 +7,7 @@ class Home extends HTMLElement {
     }
 
     connectedCallback(){
-        DbPosts.getInstance()
-            .then(db => db.getPosts())
-            .then(posts => {
-
-            const container = document.querySelector(".blogs");
-
-            posts.forEach(post => {
-
-                const tarjeta = document.createElement("app-tarjeta-blog");
-
-
-                tarjeta.setAttribute("titulo", post.titulo);
-                tarjeta.setAttribute("urlImagen", post.imagen);
-
-                tarjeta.setAttribute("contenido", post.contenido);
-
-                container.appendChild(tarjeta);
-
-            });
-
-        });
+        
         this.innerHTML = `
         <app-hero></app-hero>
 
@@ -129,8 +109,31 @@ class Home extends HTMLElement {
             </form>
             </div>
         </section>
-    `
+    `;
+
+        DbPosts.getInstance()
+                .then(db => db.getPosts())
+                .then(posts => {
+
+                const container = document.querySelector(".blogs");
+
+                posts.forEach(post => {
+
+                    const tarjeta = document.createElement("app-tarjeta-blog");
+
+
+                    tarjeta.setAttribute("titulo", post.titulo);
+                    tarjeta.setAttribute("urlImagen", post.imagen);
+
+                    tarjeta.setAttribute("contenido", post.contenido);
+
+                    container.appendChild(tarjeta);
+
+                });
+
+            });
     }
+    
 }
 
 customElements.define("app-home", Home);

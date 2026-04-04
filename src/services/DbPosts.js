@@ -1,8 +1,10 @@
+import data from '../data/posts.json';
+
 class DbPosts {
 
   static instance = null;
 
-  constructor(data){
+  constructor(){
     if(DbPosts.instance){
       return DbPosts.instance;
     }
@@ -16,10 +18,8 @@ class DbPosts {
 
     if(!DbPosts.instance){
 
-      const res = await fetch("/data/posts.json");
-      const data = await res.json();
-
-      DbPosts.instance = new DbPosts(data);
+      
+      DbPosts.instance = new DbPosts();
     }
 
     return DbPosts.instance;
