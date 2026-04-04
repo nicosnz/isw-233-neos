@@ -1,63 +1,63 @@
-import path from 'path' ;
+import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+export default (env, args) => {
+    const isProduction = args.mode === 'production';
 
-
-// export default {
-//     entry:'./src/index.js',
-//     output: {
-//         filename:'index.js',
-//         path: path.resolve(__dirname, 'dist')
-//     },
-//     module:{
-//         rules:[
-//             {
-//                 test: /\.css$/,
-//                 use:[MiniCssExtractPlugin.loader,'css-loader']
-//             }
-//         ]
-//     },
-//     plugins:[
-//         new HtmlWebpackPlugin({template:'src/index.html'}),
-//         new MiniCssExtractPlugin({filename:''})
-//     ],
-//     devServer : {
-//         open:true
-//     },
-//     devtool:'source-map'
-// }
-
-export default (env,args) => {
-    const {mode} = args;
-    const isProduction = mode === 'production'
     return {
-        entry:'./src/index.js',
+        entry: './src/index.js',
+
         output: {
-            filename:'[main].[contenthash].js',
+            filename: isProduction
+                ? '[name].[contenthash].js'
+                : 'bundle.js',
             path: path.resolve(__dirname, 'dist'),
-            clean:true
+            clean: true
         },
-        module:{
-            rules:[
+
+        module: {
+            rules: [
                 {
-                    test: /\.css$/,
-                    use:[MiniCssExtractPlugin.loader,'css-loader']
+                    test: /\.css$/i,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        'postcss-loader'
+                    ]
                 }
             ]
         },
-        plugins:[
-            new HtmlWebpackPlugin({template:'src/index.html'}),
-            new MiniCssExtractPlugin({filename:'styles.css'})
+
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: 'src/index.html'
+            }),
+
+            new MiniCssExtractPlugin({
+                filename: isProduction
+                    ? '[name].[contenthash].css'
+                    : 'styles.css'
+            })
         ],
-        devServer : {
-            open:true
+
+        optimization: {
+            minimizer: [
+                '...',
+                new CssMinimizerPlugin() 
+            ]
         },
-        devtool:'source-map'
-    }
-}
+
+        devServer: {
+            open: true,
+            static: './public'
+        },
+
+        devtool: isProduction ? false : 'source-map'
+    };
+};
