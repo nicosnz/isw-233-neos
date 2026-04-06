@@ -1,6 +1,6 @@
-import DbPosts from "../services/DbPosts.js";
+import DbPosts from "../services/DbPosts";
 
-class Home extends HTMLElement {
+export class Home extends HTMLElement {
 
     constructor(){
         super();
@@ -11,7 +11,7 @@ class Home extends HTMLElement {
             .then(db => db.getPosts())
             .then(posts => {
 
-            const container = document.querySelector(".blogs");
+            const container = document.querySelector(".blogs") as HTMLDivElement;
 
             posts.forEach(post => {
 

@@ -1,3 +1,5 @@
+import type { Home } from "../pages/Home";
+
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     threshold: 0.1
   });
 
-  const elements = document.querySelector("app-home").children;
+  const elements = (document.querySelector("app-home") as Home).children;
   Array.from(elements).forEach(el => {
     el.classList.add("sleep");
     observer.observe(el);

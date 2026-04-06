@@ -1,10 +1,11 @@
+import type { TarjetaBlogResponse } from "../components/blog/TarjetaBlog.interface.js";
 import DbPosts from "../services/DbPosts.js";
 
 class Blog extends HTMLElement {
 
+    private blogs!:TarjetaBlogResponse[];
     constructor(){
         super();
-        this.blogs;
     }
 
     connectedCallback(){
@@ -32,7 +33,7 @@ class Blog extends HTMLElement {
 
         
         `;
-        const container = document.querySelector(".blogs");
+        const container = document.querySelector(".blogs") as HTMLDivElement;
 
         this.obtenerPosts().then(posts => {
             this.blogs = posts;
@@ -64,17 +65,17 @@ class Blog extends HTMLElement {
         this.renderAllBlogs();
 
     }
-    async obtenerPosts() {
+    async obtenerPosts():Promise<TarjetaBlogResponse[] >{
         const db =  await DbPosts.getInstance();
         return db.getPosts()
     }
     renderFavoriteBlogs(){
-        let container = document.querySelector(".blogs");
-        const buttonFavorite = document.getElementById("btn-favoritos");
+        let container = document.querySelector(".blogs") as HTMLDivElement;
+        const buttonFavorite = document.getElementById("btn-favoritos") as HTMLButtonElement;
         buttonFavorite.addEventListener("click",()=>{
 
             const blogsFavoritosElements = Array.from(document.querySelectorAll("app-tarjeta-blog")).filter(el => {
-                const svg = el.querySelector('button svg');
+                const svg = el.querySelector('button svg') as SVGAElement;
                 return svg.getAttribute('fill') == 'red';
             });
             container.innerHTML = "";
@@ -89,8 +90,8 @@ class Blog extends HTMLElement {
         })
     }
     renderAllBlogs(){
-        let container = document.querySelector(".blogs");
-        const buttonFavorite = document.getElementById("btn-todos");
+        let container = document.querySelector(".blogs") as HTMLDivElement;
+        const buttonFavorite = document.getElementById("btn-todos") as HTMLButtonElement;
         buttonFavorite.addEventListener("click",()=>{
             container.innerHTML = ''
             this.obtenerPosts().then(posts => {
