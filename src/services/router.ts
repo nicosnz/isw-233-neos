@@ -1,35 +1,36 @@
 
 import routes from "./routes.js";
+type Route = keyof typeof routes;
 
-export const Router = {
+export const router = {
 
-  init(){
+  init():void{
     document.addEventListener("click", (e) => {
 
-      const link = e.target.closest("a");
+      const link = (e.target as HTMLElement).closest("a");
       if(!link) return;
 
       e.preventDefault();
 
-      const href = link.getAttribute("href");
-      Router.go(href);
+      const href = link.getAttribute("href") as Route;
+      router.go(href);
 
     });
 
     window.addEventListener("popstate", (e) => {
-      Router.go(e.state?.route || "/", false);
+      router.go(e.state?.route || "/", false);
     });
 
-    Router.go(location.pathname || "/", false);
+    router.go(location.pathname as Route || "/", false);
   },
 
-  go(route, addToHistory = true){
+  go(route:Route, addToHistory = true):void{
 
     if(addToHistory){
       history.pushState({route}, "", route);
     }
 
-    const app = document.querySelector("#app");
+    const app = document.querySelector("#app") as HTMLDivElement
 
     app.innerHTML = ""; 
 

@@ -1,11 +1,33 @@
-import { EstadoFavorito, EstadoMarcado, EstadoNoMarcado } from '../../services/AddFavoriteBlog.js';
+import { EstadoFavorito, EstadoMarcado, EstadoNoMarcado } from '../../services/EstadoTarjetaBlog';
 
 
-class TarjetaBlog extends HTMLElement {
-
+export class TarjetaBlog extends HTMLElement {
+    estado:EstadoFavorito;
+    observerActivo:boolean;
+    svgObserver:MutationObserver;
     constructor(){
         super();
         this.estado = new EstadoNoMarcado(this);
+        this.observerActivo = false;
+        this.svgObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+            if (mutation.type === "attributes" && mutation.attributeName === "fill") {
+                if (!this.observerActivo) {
+                
+                return;
+                }
+                const svg = this.querySelector('#iconoMeGusta') as SVGElement | null;
+                if (!svg) return;
+
+                const nuevoValor = svg.getAttribute("fill");
+                if (nuevoValor === "red") {
+                    this.mostrarToast("Blog agregado con éxito a favoritos");
+                } else if (nuevoValor === "gray") {
+                    this.mostrarToast("Blog removido con éxito de favoritos");
+                }
+            }
+            });
+        });
     }
 
     connectedCallback(){
@@ -35,40 +57,28 @@ class TarjetaBlog extends HTMLElement {
             </div>
                 
         `
-        const svg = this.querySelector('#iconoMeGusta');
-        this._observerActivo = false; 
+        const svg = this.querySelector('#iconoMeGusta') as SVGElement | null;
+        if (!svg) return;
+        
 
-        this.svgObserver = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-            if (mutation.type === "attributes" && mutation.attributeName === "fill") {
-                if (!this._observerActivo) {
-                
-                return;
-                }
-                const nuevoValor = svg.getAttribute("fill");
-                if (nuevoValor === "red") {
-                    this.mostrarToast("Blog agregado con éxito a favoritos");
-                } else if (nuevoValor === "gray") {
-                    this.mostrarToast("Blog removido con éxito de favoritos");
-                }
-            }
-            });
-        });
         this.svgObserver.observe(svg, { attributes: true});
-        this.querySelector(".btn-favorito").addEventListener("click", () => {
-            this._observerActivo = true;
-            this.estado.toggle(titulo);
+        (this.querySelector(".btn-favorito") as HTMLButtonElement).addEventListener("click", () => {
+            this.observerActivo = true;
+            if(titulo){
+                this.estado.toggle(titulo);
+            }
         });
+        if(titulo){
 
-        this.inicializarEstado(titulo);
+            this.inicializarEstado(titulo);
+        }
     }
     disconnectedCallback() {
         if (this.svgObserver) {
             this.svgObserver.disconnect();
-            this.svgObserver = null;
         }
     }
-    mostrarToast(mensaje) {
+    mostrarToast(mensaje:string) {
         const toast = document.createElement("div");
         toast.className = "toast";
         toast.textContent = mensaje;
@@ -83,17 +93,20 @@ class TarjetaBlog extends HTMLElement {
     }
 
 
-    setEstado(nuevoEstado){
+    setEstado(nuevoEstado:EstadoFavorito){
         this.estado = nuevoEstado;
     }
 
-    actualizarUI(esFavorito){
-        const svg = this.querySelector("svg");
-        svg.setAttribute("fill", esFavorito ? "red" : "gray");
+    actualizarUI(esFavorito:boolean){
+        const svg = this.querySelector("svg") as SVGAElement | null;
+        if(svg){
+
+            svg.setAttribute("fill", esFavorito ? "red" : "gray");
+        }
     }
 
-    saveFavorito(titulo){
-        let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    saveFavorito(titulo:string){
+        let favoritos:string[] = JSON.parse(localStorage.getItem("favoritos") || "") || [];
         
         if(!favoritos.includes(titulo)){
             favoritos.push(titulo);
@@ -101,14 +114,14 @@ class TarjetaBlog extends HTMLElement {
         }
     }
 
-    removeFavorito(titulo){
-        let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    removeFavorito(titulo:string){
+        let favoritos:string[] = JSON.parse(localStorage.getItem("favoritos") || "") || [];
         favoritos = favoritos.filter(fav => fav !== titulo);
         localStorage.setItem("favoritos", JSON.stringify(favoritos));
     }
 
-    inicializarEstado(titulo){
-        let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    inicializarEstado(titulo:string){
+        let favoritos:string = JSON.parse(localStorage.getItem("favoritos") || "") || [];
         if(favoritos.includes(titulo)){
             this.setEstado(new EstadoMarcado(this));
             this.actualizarUI(true);
